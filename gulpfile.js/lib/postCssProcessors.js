@@ -1,0 +1,38 @@
+var path = require('path')
+
+module.exports = [
+  require('postcss-easy-import'),
+  require('postcss-sassy-mixins'),
+  require('postcss-conditionals'),
+  require('postcss-apply'),
+  require('postcss-nested'),
+  require('postcss-functions')({
+    glob: path.join(__dirname, '../../orbis_travel', 'assets', 'css', 'helpers', 'functions', '*.js')
+  }),
+
+  require('postcss-custom-properties'),
+  require('postcss-custom-media'),
+  require('postcss-media-minmax'),
+  require('postcss-custom-selectors'),
+  // Niceties
+  require('postcss-assets')({
+    basePath: 'orbis_travel/assets/',
+    loadPaths: ['img/'],
+    baseUrl: '/static/'
+  }),
+  require('postcss-inline-svg')({
+    path: 'orbis_travel/assets/img/'
+  }),
+  require('postcss-brand-colors'),
+  require('postcss-property-lookup'),
+  require('postcss-lh')({
+    rhythmUnit: 'vr'
+  }),
+  require('postcss-pxtorem'),
+  require('postcss-will-change'),
+  require('postcss-font-awesome'),
+  require('postcss-round-subpixels'),
+  require('postcss-calc'),
+  require('postcss-hexrgba'),
+  require('autoprefixer'),
+];

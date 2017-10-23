@@ -1,0 +1,33 @@
+machine:
+  node:
+    version: 8.4.0
+  python:
+    version: 3.6.2
+
+dependencies:
+  cache_directories:
+    - /home/ubuntu/nvm/versions/node/v8.4.0/bin
+    - /home/ubuntu/nvm/versions/node/v8.4.0/lib/node_modules
+  override:
+    - pip install -U setuptools
+    - pip install --disable-pip-version-check -r requirements.txt
+    - npm install --global yarn
+    - yarn add stylelint@8.1.1 stylelint-order@0.5.0 eslint@4.6.1 eslint-config-standard@10.2.1 eslint-config-prettier@2.4.0 eslint-plugin-standard@3.0.1 eslint-plugin-html@3.0.0 eslint-plugin-prettier@2.2.0 babel-eslint@7.2.3 standard@10.0.2
+
+test:
+  override:
+    - pylint orbis_travel/ --load-plugins pylint_django,pylint_mccabe --ignore=migrations,tests -d missing-docstring,invalid-name,no-init,too-many-ancestors,no-member,line-too-long,attribute-defined-outside-init,too-few-public-methods,no-self-use,unused-argument,protected-access,locally-disabled,duplicate-code --reports=n  # CI
+    - isort --check-only --diff --quiet --skip-glob=.venv --skip-glob=node_modules --skip-glob=*/migrations/*  # CI
+    - yarn run lint:css  # CI
+    - yarn run lint:js  # CI
+    - python manage.py test
+
+# deployment:
+#   staging:
+#     branch: develop
+#     commands:
+#       - python manage.py update --remote=staging
+#   production:
+#     branch: master
+#     commands:
+#       - python manage.py update --remote=production
