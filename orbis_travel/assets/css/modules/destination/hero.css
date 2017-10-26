@@ -1,0 +1,178 @@
+/*
+|--------------------------------------------------------------------------
+| Destination hero
+|--------------------------------------------------------------------------
+| @namespace: dst-
+|
+*/
+.dst-Hero {
+  position: relative;
+
+  display: flex;
+  height: 100vh;
+}
+
+.dst-Hero_Inner {
+  @apply --GridContainer;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Image
+|--------------------------------------------------------------------------
+|
+*/
+.dst-Hero_ImageContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.dst-Hero_Image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: @width;
+
+  object-fit: cover;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Header
+|--------------------------------------------------------------------------
+|
+*/
+.dst-Hero_Header {
+  position: relative;
+
+  margin-bottom: 1vr;
+}
+
+.dst-Hero_Back {
+  @apply --Font-16;
+
+  align-items: center;
+
+  display: inline-flex;
+
+  text-transform: uppercase;
+
+  color: #fff;
+
+  /* stylelint-disable selector-max-type */
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: var(--Grid_Gutter);
+
+    transform: rotate(180deg);
+  }
+  /* stylelint-enable */
+}
+
+/*
+|--------------------------------------------------------------------------
+| Icon items
+|--------------------------------------------------------------------------
+|
+*/
+.dst-Hero_Items {
+  @apply --GridRow;
+
+  margin-bottom: 1vr;
+}
+
+.dst-Hero_Item {
+  @apply --GridColumn;
+}
+
+.dst-Hero_Icon {
+  align-items: center;
+
+  display: flex;
+
+  font-size: 24px;
+
+  /* stylelint-disable selector-max-type */
+  svg {
+    width: 27px;
+    height: 27px;
+    margin-left: var(--Grid_Gutter);
+  }
+  /* stylelint-enable */
+}
+
+/*
+|--------------------------------------------------------------------------
+| Body
+|--------------------------------------------------------------------------
+|
+*/
+.dst-Hero_Body {
+  position: relative;
+
+  color: #fff;
+}
+
+.dst-Hero_Content {
+  position: relative;
+
+  flex-direction: column;
+  justify-content: center;
+
+  display: flex;
+  width: calc(1 / 2 * 100%);
+  padding-right: calc(var(--Grid_Gutter) * 8);
+  padding-left: @padding-right;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 78px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: var(--Color_Gradient-light);
+  }
+}
+
+.dst-Hero_Title {
+  margin-bottom: 1vr;
+
+  font-family: var(--Font_Family-anton);
+  font-size: 124px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  line-height: 122px;
+  text-transform: uppercase;
+}
+
+.dst-Hero_SubTitle {
+  margin-bottom: 1.5vr;
+
+  font-size: 54px;
+  line-height: 42px;
+}
+
+.dst-Hero_Text {
+  width: calc(2 / 3 * 100%);
+  margin-bottom: 2vr;
+}
+
+.dst-Hero_Link {
+  @include Button-primary;
+}

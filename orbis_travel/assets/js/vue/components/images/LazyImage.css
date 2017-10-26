@@ -1,0 +1,90 @@
+/*
+  |--------------------------------------------------------------------------
+  | Image
+  |--------------------------------------------------------------------------
+  | @namespace: img-
+  |
+  */
+.img-Image {
+  position: relative;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  .nws-Object_ImageContainer &,
+  .car-HeroCarousel_SlideImageContainer &,
+  .prj-Hero_ImageContainer & {
+    @media (--md) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .crd-Card & {
+    background-image: linear-gradient(0deg, #e8e8e8, #fff);
+  }
+}
+
+.img-Image_Media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.img-Image_Image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  transition: opacity 0.5s linear;
+
+  @supports (object-fit: cover) {
+    object-fit: cover;
+  }
+}
+
+.img-Image_Image-small {
+  .img-Image_Media-largeLoaded & {
+    opacity: 0;
+  }
+}
+
+.img-Image_Image-ie {
+  display: none;
+
+  background-position: center;
+  background-size: cover;
+
+  /* IE11+ hack */
+  /* stylelint-disable */
+  _:-ms-fullscreen,
+  :root & {
+    display: block;
+  }
+  /* stylelint-enable */
+}
+
+.img-Image_Image-blurred {
+  transform: scale(1);
+  filter: blur(50px);
+}
+
+.img-Image_Image-loaded {
+  opacity: 1;
+}

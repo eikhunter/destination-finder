@@ -47,6 +47,9 @@
     {% block feeds %}{% endblock %}
 
     {# Project #}
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
     {% if settings.TYPEKIT_USED %}
       {% include 'base/_typekit.html' %}
     {% endif %}
@@ -113,6 +116,8 @@
         {% endblock %}
       </div>
     {% endblock %}
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcx47k8vEBKfYghUgi0TLQLbgFDcCfgOw"></script>
 
     {{ render_bundle('vendor', 'js') }}
     {{ render_bundle('app', 'js') }}

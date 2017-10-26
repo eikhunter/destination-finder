@@ -7,6 +7,9 @@ module.exports = {
     allowImportExportEverywhere: true
   },
   plugins: ['compat', 'html', 'prettier'],
+  globals: {
+    google: true
+  },
   env: {
     browser: true,
     es6: true

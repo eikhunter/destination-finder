@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+
+{% block body_class %}lyt-AbsoluteHeader{% endblock %}
+
+{% block content_above %}
+  <div class="dst-Hero">
+    <div class="dst-Hero_ImageContainer">
+      {{ render_lazy_image(destination.image, width=2560, height=1320, crop='center') }}
+    </div>
+    <div class="dst-Hero_Content">
+      <header class="dst-Hero_Header">
+        <a href="/" class="dst-Hero_Back">
+          {% include 'arrow-icon.svg' %}
+          Go back
+        </a>
+      </header>
+      <div class="dst-Hero_Body">
+        <ul class="dst-Hero_Items">
+          {% if destination.flight_price %}
+          <li class="dst-Hero_Item">
+            <p class="dst-Hero_Icon ">
+              {{ destination.weather }}&#8451;
+              {% include 'sun-icon.svg' %}
+            </p>
+          </li>
+          {% endif %}
+
+          {% if destination.flight_price %}
+          <li class="dst-Hero_Item">
+            <p class="dst-Hero_Icon">
+              £{{ destination.flight_price }}
+              {% include 'plane-icon.svg' %}
+            </p>
+          </li>
+          {% endif %}
+
+          {% if destination.hotel_price %}
+          <li class="dst-Hero_Item">
+            <p class="dst-Hero_Icon">
+              £{{ destination.hotel_price }}
+              {% include 'house-icon.svg' %}
+            </p>
+          </li>
+          {% endif %}
+        </ul>
+        <h1 class="dst-Hero_Title">{{ destination.location }}</h1>
+        <h2 class="dst-Hero_SubTitle">{{ destination.country }}</h2>
+        <p class="dst-Hero_Text">{{ destination.description }}</p>
+        <a href="" class="dst-Hero_Link">Plan your trip</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="dst-Split">
+    <div class="dst-Split_Inner">
+      <div class="dst-Split_Columns">
+        <div class="dst-Split_Column dst-Split_Column-map">
+          <div class="dst-Split_MapContainer">
+            <google-map location="{{ destination.location }}"></google-map>
+          </div>
+        </div>
+        <div class="dst-Split_Column dst-Split_Column-content">
+          <div class="dst-Split_Content">
+            <div class="dst-Split_Controls">
+              <a class="dst-Split_Control dst-Split_Control-prev">
+                {% include 'arrow-icon.svg' %}
+              </a>
+              <a class="dst-Split_Control dst-Split_Control-next">
+                {% include 'arrow-icon.svg' %}
+              </a>
+            </div>
+            <ul class="dst-Split_Items">
+              <li class="dst-Split_Item">
+                <div class="crd-Information">
+                  <header class="crd-Information_Header">
+                  <span class="crd-Information_Number">1</span>
+                  <h3 class="crd-Information_Title">Things to do</h3>
+                  </header>
+                  <div class="crd-Information_Body">
+                    <div class="crd-Information_ImageContainer">
+                      <img alt="" src="/static/img/things-to-do-san-francisco.jpg" class="crd-Information_Image">
+                    </div>
+                    <div class="crd-Information_Content">
+                      <p class="crd-Information_Text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias cumque delectus, distinctio eos est, ipsam mollitia, natus neque nihil nostrum temporibus voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias cumque delectus, distinctio eos est, ipsam mollitia, natus neque nihil nostrum temporibus voluptatum.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="dst-Split_Item">
+                <div class="crd-Information">
+                  <header class="crd-Information_Header">
+                    <span class="crd-Information_Number">2</span>
+                    <h3 class="crd-Information_Title">Restaurant / Cafes</h3>
+                  </header>
+                  <div class="crd-Information_Body">
+                    <div class="crd-Information_ImageContainer">
+                      <img alt="" src="/static/img/san-francisco-food.jpg" class="crd-Information_Image">
+                    </div>
+                    <div class="crd-Information_Content">
+                      <p class="crd-Information_Text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias cumque delectus, distinctio eos est, ipsam mollitia, natus neque nihil nostrum temporibus voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias cumque delectus, distinctio eos est, ipsam mollitia, natus neque nihil nostrum temporibus voluptatum.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="dst-Split_Item">
+                <div class="crd-Information">
+                  <header class="crd-Information_Header">
+                    <span class="crd-Information_Number">3</span>
+                    <h3 class="crd-Information_Title">Places to see</h3>
+                  </header>
+                  <div class="crd-Information_Body">
+                    <div class="crd-Information_ImageContainer">
+                      <img alt="" src="/static/img/places-to-see-san-francisco.jpg" class="crd-Information_Image">
+                    </div>
+                    <div class="crd-Information_Content">
+                      <p class="crd-Information_Text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias cumque delectus, distinctio eos est, ipsam mollitia, natus neque nihil nostrum temporibus voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias cumque delectus, distinctio eos est, ipsam mollitia, natus neque nihil nostrum temporibus voluptatum.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="dst-Split_Item">
+                <div class="crd-Information">
+                  <header class="crd-Information_Header">
+                    <span class="crd-Information_Number">4</span>
+                    <h3 class="crd-Information_Title">Nightlife</h3>
+                  </header>
+                  <div class="crd-Information_Body">
+                    <div class="crd-Information_ImageContainer">
+                      <img alt="" src="/static/img/night-life-san-francisco.jpg" class="crd-Information_Image">
+                    </div>
+                    <div class="crd-Information_Content">
+                      <p class="crd-Information_Text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias cumque delectus, distinctio eos est, ipsam mollitia, natus neque nihil nostrum temporibus voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias cumque delectus, distinctio eos est, ipsam mollitia, natus neque nihil nostrum temporibus voluptatum.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+

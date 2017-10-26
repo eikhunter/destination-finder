@@ -7,9 +7,15 @@
   |--------------------------------------------------------------------------
   |
   */
-  --Color_Anchor: #702670;
-  --Color_Body: #5c748c;
-  --Color_Border: #d0d5d8;
+  --Color_Gradient-light: rgba(160, 160, 160, 0.55);
+  --Color_Peach: #fa6044;
+  --Color_Red: #ff2424;
+  --Color_Dark: #cdcdcd;
+  --Color_Peach-faded: rgba(221, 62, 33, 0.8);
+
+  --Color_Anchor: #ff2424;
+  --Color_Body: #444;
+  --Color_Border: #f6f6f6;
 
   /*
   |--------------------------------------------------------------------------
@@ -21,13 +27,20 @@
   * Font - Families
   */
   --Font_Family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  --Font_Family-body: var(--Font_Family);
+  --Font_Family-poppins: 'Poppins', var(--Font_Family);
+  --Font_Family-anton: 'Anton', var(--Font_Family);
+  --Font_Family-body: var(--Font_Family-poppins);
+
 
   /**
   * Font - Sizes
   */
   /* letter-spacing: calc(${100}em / 1000) ${} = number in photoshop */
-  --Font-16: { font-size: 16px; letter-spacing: 0; line-height: 1vr; };
+  --Font-16: { font-size: 16px; line-height: 1vr; };
+  --Font-18: { font-size: 16px; line-height: 1vr; };
+  --Font-22: { font-size: 22px; line-height: 1vr; };
+  --Font-42: { font-size: 42px; line-height: 1vr; };
+  --Font-110: { font-size: 110px; line-height: 6vr; };
 
   /*
   |--------------------------------------------------------------------------
@@ -77,12 +90,13 @@
   */
   --Button-base: {
     display: inline-block;
-    padding: 0.5vr var(--Grid_Gutter);
+    padding: 1vr calc(var(--Grid_Gutter) * 2);
 
     background-color: transparent;
     border: 1px solid transparent;
     color: #fff;
 
+    /* Style reasons */
     transition: background-color var(--Global_Transition),
                 border var(--Global_Transition),
                 color var(--Global_Transition);
@@ -104,7 +118,7 @@
   |--------------------------------------------------------------------------
   |
   */
-  font: 16px / 1.5 var(--Font_Family);
+  font: 16px / 1.75 var(--Font_Family-body);
 
   cursor: auto;
 }

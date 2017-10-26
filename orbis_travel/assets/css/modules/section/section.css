@@ -1,0 +1,84 @@
+/*
+|--------------------------------------------------------------------------
+| Section
+|--------------------------------------------------------------------------
+| @namespace: sec-
+|
+*/
+.sec-Section {
+  margin-top: 1vr;
+  margin-bottom: @margin-top;
+
+  @media (--sm) {
+    margin-top: 2vr;
+    margin-bottom: @margin-top;
+  }
+
+  @media (--md) {
+    margin-top: 2.5vr;
+    margin-bottom: @margin-top;
+  }
+
+  @media (--lg) {
+    margin-top: 3vr;
+    margin-bottom: @margin-top;
+  }
+
+  @media (--xlg) {
+    margin-top: 3.5vr;
+    margin-bottom: @margin-top;
+  }
+}
+
+.sec-Section-tight {
+  @media (--sm) {
+    margin-top: 1.5vr;
+    margin-bottom: @margin-top;
+  }
+
+  @media (--lg) {
+    margin-top: 2vr;
+    margin-bottom: @margin-top;
+  }
+}
+
+.sec-Section-grey {
+  margin: 0;
+  padding-top: 1.5vr;
+  padding-bottom: @padding-top;
+
+  @media (--sm) {
+    padding-top: 2vr;
+    padding-bottom: @padding-top;
+  }
+
+  @media (--md) {
+    padding-top: 2.5vr;
+    padding-bottom: @padding-top;
+  }
+
+  @media (--lg) {
+    padding-top: 3.75vr;
+    padding-bottom: 3.5vr;
+  }
+}
+
+.sec-Section-greytight {
+  margin: 0;
+  padding-top: 1.5vr;
+  padding-bottom: @padding-top;
+
+  @media (--md) {
+    padding-top: 1.75vr;
+    padding-bottom: @padding-top;
+  }
+
+  @media (--lg) {
+    padding-top: 2vr;
+    padding-bottom: 3.25vr;
+  }
+}
+
+.sec-Section_Inner {
+  @include Grid_Container;
+}

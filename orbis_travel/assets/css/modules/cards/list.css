@@ -1,0 +1,40 @@
+/*
+|--------------------------------------------------------------------------
+| List
+|--------------------------------------------------------------------------
+| @namespace: crd-
+|
+*/
+.crd-List {
+  @media (--xs-viewport) {
+    margin-right: -20px;
+    margin-left: @margin-right;
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Items
+|--------------------------------------------------------------------------
+|
+*/
+.crd-List_Items {
+  @apply --GridRow;
+
+  flex-wrap: wrap;
+}
+
+.crd-List_Item {
+  @apply --GridColumn;
+
+  width: calc(1 / 3 * 100% - var(--Grid_Gutter) * 2);
+  margin-top: calc(var(--Grid_Gutter) * 2);
+
+  @media (--sm) {
+    display: flex;
+  }
+
+  &:nth-child(-n + 3) {
+    margin-top: 0;
+  }
+}

@@ -10,4 +10,178 @@
 .hd-Header {
   position: relative;
   z-index: 10;
+
+  background-color: #111;
+
+  .lyt-AbsoluteHeader & {
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    background-color: transparent;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+
+      background-color: #111;
+
+      opacity: 0.7;
+    }
+  }
+}
+
+.hd-Header_Inner {
+  @include Grid_Container;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Items
+|--------------------------------------------------------------------------
+|
+*/
+.hd-Header_Items {
+  display: flex;
+  padding-top: 0.5vr;
+  padding-bottom: @padding-top;
+}
+
+.hd-Header_Item {
+  align-items: center;
+  flex: 1;
+
+  display: flex;
+}
+
+.hd-Header_Item-logo {
+  justify-content: center;
+}
+
+.hd-Header_Item-language {
+  justify-content: flex-end;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Search
+|--------------------------------------------------------------------------
+|
+*/
+.hd-Header_Search {
+  display: flex;
+}
+
+.hd-Header_SearchInput {
+  border: none;
+  box-shadow: none;
+
+  color: #fff;
+
+  &::placeholder {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #fff;
+
+    transition: color, var(--Global_Transition);
+  }
+
+  &:focus {
+    &::placeholder {
+      color: #888;
+    }
+  }
+
+  &:hover {
+    &::placeholder {
+      color: #888;
+    }
+  }
+}
+
+.hd-Header_SearchButton {
+  /* stylelint-disable selector-max-type */
+  svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
+  /* stylelint-enable */
+}
+
+/*
+|--------------------------------------------------------------------------
+| Logo
+|--------------------------------------------------------------------------
+|
+*/
+.hd-Header_Logo {
+  align-items: center;
+
+  display: flex;
+
+  color: #fff;
+
+  /* stylelint-disable selector-max-type */
+  svg {
+    display: block;
+    width: 50px;
+    height: @width;
+  }
+  /* stylelint-enable */
+}
+
+.hd-Header_Image {
+  width: 50px;
+  height: @width;
+}
+
+.hd-Header_Text {
+  min-width: 80px;
+  margin-right: 8px;
+  margin-left: @margin-right;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #fff;
+}
+
+.hd-Header_Text-left {
+  text-align: right;
+}
+
+.hd-Header_Text-right {
+  text-align: left;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Language filter
+|--------------------------------------------------------------------------
+|
+*/
+.hd-Header_Label {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #fff;
+}
+
+.hd-Header_Select {
+  height: 28px;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  border: transparent;
+
+  color: #999;
 }

@@ -1,0 +1,247 @@
+/*
+|--------------------------------------------------------------------------
+| Card
+|--------------------------------------------------------------------------
+| @namespace: crd-
+|
+*/
+.crd-Card {
+  display: flex;
+
+  will-change: transform;
+
+  transition: translate, var(--Global_Transition);
+
+  @media (--xs-viewport) {
+    justify-content: space-between;
+
+    min-height: 84px;
+  }
+
+  @media (--sm) {
+    flex-direction: column;
+
+    display: flex;
+    width: 100%;
+
+    text-align: center;
+  }
+
+  &:hover {
+    @media (--lg) {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Image
+|--------------------------------------------------------------------------
+|
+*/
+.crd-Card_ImageContainer {
+  position: relative;
+
+  @media (--xs-viewport) {
+    position: relative;
+
+    flex-shrink: 0;
+    order: 1;
+
+    width: 100px;
+  }
+
+  @media (--sm) {
+    width: 100%;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 56%,
+      rgba(0, 0, 0, 0) 59%,
+      rgba(0, 0, 0, 0.22) 70%,
+      rgba(0, 0, 0, 0.79) 86%
+    );
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Body
+|--------------------------------------------------------------------------
+|
+*/
+.crd-Card_Body {
+  position: relative;
+
+  flex: 1 1 auto;
+
+  background-color: #fff;
+
+  @media (--sm) {
+    align-items: center;
+    flex-direction: column;
+
+    display: flex;
+    padding-top: 0.5vr;
+    padding-bottom: @padding-top;
+  }
+
+  @media (--lg) {
+    padding: 1.25vr calc(var(--Grid_Inside) * 2);
+  }
+
+  &::after {
+    @media (--lg) {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+
+      box-shadow: 0 32px 30px 0 rgba(0, 0, 0, 0.07);
+      opacity: 0;
+      pointer-events: none;
+
+      transition: opacity 0.3s;
+    }
+
+    .crd-Card:hover & {
+      @media (--lg) {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.crd-Card_Title {
+  @apply --Font-22;
+  text-transform: uppercase;
+
+  color: var(--Color_Body);
+
+  @media (--sm) {
+    margin-bottom: 0.25vr;
+
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+}
+
+.crd-Card_SubTitle {
+  @apply --Font-18;
+
+  color: var(--Color_Body);
+}
+
+.crd-Card_Text {
+  font-weight: 300;
+  line-height: 24px;
+
+  color: var(--Color_Body);
+}
+
+.crd-Card_Link {
+  display: none;
+
+  color: var(--Color_Body);
+
+  @media (--sm) {
+    align-items: center;
+
+    display: flex;
+    margin-top: auto;
+
+    font-weight: 600;
+    text-transform: uppercase;
+
+    border-top: 1vr solid transparent;
+
+    transition: opacity 0.3s;
+  }
+
+  @media (--md) {
+    border-top: 0.5vr solid transparent;
+  }
+
+  @media (--lg) {
+    border-top: 0.75vr solid transparent;
+  }
+}
+
+.crd-Card_LinkIcon {
+  display: block;
+  width: 20px;
+  height: 11px;
+  margin-left: 10px;
+
+  /* stylelint-disable selector-max-type */
+  svg {
+    display: block;
+    width: 20px;
+    height: 11px;
+
+    stroke: currentColor;
+  }
+  /* stylelint-enable */
+}
+
+/*
+|--------------------------------------------------------------------------
+| Items
+|--------------------------------------------------------------------------
+|
+*/
+.crd-Card_Items {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  justify-content: space-between;
+
+  display: flex;
+  padding-right: var(--Grid_Gutter);
+  padding-bottom: 8px;
+  padding-left: @padding-right;
+}
+
+.crd-Card_Item {
+  color: #fff;
+}
+
+.crd-Card_Price {
+  @apply --Font-22;
+}
+
+/**
+* Favourite icon
+*/
+.crd-Card_Favourite {
+  color: var(--Color_Red);
+
+  /* stylelint-disable selector-max-type */
+  svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+
+    stroke: currentColor;
+  }
+  /* stylelint-enable */
+}

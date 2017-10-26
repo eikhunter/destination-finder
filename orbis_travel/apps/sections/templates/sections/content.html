@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block body_class %}
+  {% if pages.is_homepage %}lyt-Homepage{% endif %}
+{% endblock %}
+
 {% block main %}
   {% for section in pages.current.contentsection_set.all() %}
     {{ render_section(section) }}

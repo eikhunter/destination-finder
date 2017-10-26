@@ -1,10 +1,36 @@
 <header class="hd-Header">
   <div class="hd-Header_Inner">
-    <a class="hd-Header_Logo" href="{{ pages.homepage.get_absolute_url() }}"></a>
+    <ul class="hd-Header_Items">
+      <li class="hd-Header_Item">
+        <div class="hd-Header_Search">
+          <button class="hd-Header_SearchButton">
+            {% include 'search-icon.svg' %}
+          </button>
+          <input type="text" class="hd-Header_SearchInput" placeholder="Search Orbis">
+        </div>
+      </li>
+      <li class="hd-Header_Item hd-Header_Item-logo">
+        <a class="hd-Header_Link" href="{{ pages.homepage.get_absolute_url() }}">
+          <div class="hd-Header_Logo">
+            <p class="hd-Header_Text hd-Header_Text-left">Orbis</p>
+             {% include 'logo.svg' %}
+            <p class="hd-Header_Text hd-Header_Text-right">Travel</p>
+          </div>
+        </a>
+      </li>
+      <li class="hd-Header_Item hd-Header_Item-language">
+        <label for="" class="hd-Header_Label">Language</label>
+        <select name="" id="" class="hd-Header_Select">
+          <option value="" class="hd-Header_LanguageOption">English</option>
+          <option value="" class="hd-Header_LanguageOption">Italian</option>
+          <option value="" class="hd-Header_LanguageOption">French</option>
+        </select>
+      </li>
+    </ul>
 
-    <nav class="hd-Header_Nav">
-      {{ render_navigation(pages.homepage.navigation, section=pages.homepage) }}
-    </nav>
+    {#    <nav class="hd-Header_Nav">#}
+    {#      {{ render_navigation(pages.homepage.navigation, section=pages.homepage) }}#}
+    {#    </nav>#}
 
     <div class="hd-Header_MobileNav">
       <mobile-nav :items="{{ get_navigation_json(pages.homepage.navigation) }}"></mobile-nav>

@@ -6,6 +6,7 @@ import App from './vue/App'
 
 import LazyImage from './utils/lazy-image'
 import { externalLinks, iframeFix } from './utils'
+import { InformationCarousel } from './information'
 
 new Vue(App).$mount('#app')
 
@@ -16,6 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (lazyImage) {
     const lazyImages = document.querySelectorAll('.js-LazyImage')
     Array.from(lazyImages).map(image => new LazyImage({ el: image }))
+  }
+
+  if (document.querySelector('.dst-Split')) {
+    Array.from(document.querySelectorAll('.dst-Split')).map(el => {
+      new InformationCarousel({ el })
+    })
   }
 
   // If the browser isn't Safari, don't do anything

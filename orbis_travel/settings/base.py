@@ -143,6 +143,7 @@ INSTALLED_APPS = [
 
     # 'orbis_travel.apps.careers',
     'orbis_travel.apps.components',
+    'orbis_travel.apps.destinations',
     # 'orbis_travel.apps.events',
     # 'orbis_travel.apps.faqs',
     # 'orbis_travel.apps.news',
@@ -239,6 +240,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django_jinja.backend.Jinja2',
         'DIRS': [
+            os.path.join(SITE_ROOT, 'assets/img/svg'),
             os.path.join(SITE_ROOT, 'templates'),
         ],
         'APP_DIRS': True,

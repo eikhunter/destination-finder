@@ -12,6 +12,14 @@
 
   background-color: #0e0e0e;
   overflow: hidden;
+
+  .dst-Hero_ImageContainer & {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .img-Image_Media {

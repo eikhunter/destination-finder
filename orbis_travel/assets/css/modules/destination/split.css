@@ -1,0 +1,115 @@
+/*
+|--------------------------------------------------------------------------
+| Split
+|--------------------------------------------------------------------------
+| @namespace: dst-
+|
+*/
+.dst-Split {
+  position: relative;
+
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.dst-Split_Columns {
+  display: flex;
+  height: 100vh;
+}
+
+.dst-Split_Column {
+  position: relative;
+
+  display: flex;
+  width: calc(1 / 2 * 100%);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Map
+|--------------------------------------------------------------------------
+|
+*/
+.dst-Split_MapContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.dst-Split_Image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: @width;
+
+  object-fit: cover;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Content
+|--------------------------------------------------------------------------
+|
+*/
+.dst-Split_Content {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+
+  display: flex;
+  padding-left: calc(var(--Grid_Gutter) * 4);
+}
+
+.dst-Split_Items {
+  @apply --GridRow;
+}
+
+.dst-Split_Item {
+  @apply --GridColumn;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Controls
+|--------------------------------------------------------------------------
+|
+*/
+.dst-Split_Controls {
+  @apply --GridRow;
+
+  margin-bottom: 1vr;
+}
+
+.dst-Split_Control {
+  @apply --GridColumn;
+
+  color: var(--Color_Body);
+
+  transition: color, var(--Global_Transition);
+
+  /* stylelint-disable */
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.dst-Split_Control-prev {
+  transform: rotate(180deg);
+}

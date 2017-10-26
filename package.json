@@ -4,6 +4,8 @@
   "dependencies": {
     "babel-polyfill": "6.23.0",
     "es6-promise": "^4.1.0",
+    "eslint-plugin-node": "^5.2.1",
+    "siema": "^1.4.6",
     "vue": "^2.3.4",
     "vuex": "^2.3.1"
   },
@@ -28,6 +30,7 @@
     "eslint-loader": "^1.8.0",
     "eslint-plugin-compat": "^1.0.3",
     "eslint-plugin-html": "^3.0.0",
+    "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section class="sec-Section">
+    <div class="sec-Section_Inner">
+      <div class="crd-List">
+        <ul class="crd-List_Items">
+          {% for destination in destination_list %}
+            <li class="crd-List_Item">
+              <a class="crd-Card" href="{{ destination.get_absolute_url() }}">
+                <div class="crd-Card_ImageContainer">
+                  {{ render_lazy_image(destination.image, width=390, height=216, crop='center') }}
+
+                  <ul class="crd-Card_Items">
+                    <li class="crd-Card_Item">
+                      <p class="crd-Card_Price">£540</p>
+                    </li>
+                    <li class="crd-Card_Item">
+                    <span class="crd-Card_Favourite">
+                      {% include 'heart-icon.svg' %}
+                    </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="crd-Card_Body">
+                  <h3 class="crd-Card_Title">{{ destination.location }}</h3>
+                  <h4 class="crd-Card_SubTitle">{{ destination.country }}</h4>
+
+                  <p class="crd-Card_Text">{{ destination.description|truncatewords_html(22)|striptags }}</p>
+
+                  <span class="crd-Card_Link">
+                  <span class="crd-Card_LinkText">Find out more</span>
+                  <span class="crd-Card_LinkIcon">
+                    {% include 'arrow-icon.svg' %}
+                  </span>
+                </span>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+{% endblock %}
