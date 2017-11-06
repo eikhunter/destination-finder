@@ -3,6 +3,67 @@
 {% block content %}
   <section class="sec-Section">
     <div class="sec-Section_Inner">
+      <div class="flt-Filters">
+        <div class="flt-Filter">
+          <div class="flt-Switch">
+            <div class="flt-Switch_Left">
+              <ul class="flt-Switch_Items">
+                <li class="flt-Switch_Item">
+                  <a href="" class="flt-Switch_Link flt-Switch_Link-active">
+                    {% include 'cards-icon.svg' %}
+                  </a>
+                </li>
+                <li class="flt-Switch_Item">
+                  <a href="" class="flt-Switch_Link">
+                    {% include 'list-icon.svg' %}
+                  </a>
+                </li>
+                <li class="flt-Switch_Item">
+                  <a href="" class="flt-Switch_Link">
+                    {% include 'location-icon.svg' %}
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="flt-Switch_Right">
+              <div class="flt-Switch_Sort">
+                <label for="" class="flt-Switch_Label">Sort by</label>
+                <select name="" id="" class="flt-Switch_Select">
+                  <option value="" class="flt-Switch_Option">Country (A - Z)</option>
+                  <option value="" class="flt-Switch_Option">Country (Z - A)</option>
+                  <option value="" class="flt-Switch_Option">Price (high)</option>
+                  <option value="" class="flt-Switch_Option">Price (low)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flt-Filter">
+          <div class="flt-Switch">
+            <div class="flt-Switch_Left flt-Switch_Left-search">
+              <div class="flt-Switch_Search">
+                <button class="flt-Switch_SearchButton">
+                  {% include 'search-icon.svg' %}
+                </button>
+                <input type="text" class="flt-Switch_SearchInput" placeholder="Search destinations">
+              </div>
+            </div>
+            <div class="flt-Switch_Right">
+              <div class="flt-Switch_Sort">
+                <label for="" class="flt-Switch_Label">Country</label>
+                <select name="" id="" class="flt-Switch_Select">
+                  <option value="" class="flt-Switch_Option">United Kingdom</option>
+                  <option value="" class="flt-Switch_Option">France</option>
+                  <option value="" class="flt-Switch_Option">Italy</option>
+                  <option value="" class="flt-Switch_Option">Spain</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="crd-List">
         <ul class="crd-List_Items">
           {% for destination in destination_list %}

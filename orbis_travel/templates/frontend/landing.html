@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block body_class %}lyt-AbsoluteHeader{% endblock %}
+
+{% block content %}
+  <div class="pg-Landing">
+    <div class="pg-Landing_ImageContainer">
+      <img alt="" src="/static/img/golden-gate-bridge.jpg" class="pg-Landing_Image">
+    </div>
+  </div>
+
+  <div class="dst-Filter">
+    <div class="dst-Filter_Inner">
+      <div class="dst-Filter_Body">
+        <div class="dst-Filter_Left">
+          <ul class="dst-Filter_Items">
+            <li class="dst-Filter_Item">
+              <label for="" class="dst-Filter_Label">Holiday type</label>
+              <select name="" id="" class="dst-Filter_Select">
+                <option value="" class="dst-Filter_Option">Outdoorsy</option>
+              </select>
+            </li>
+            <li class="dst-Filter_Item">
+              <label for="" class="dst-Filter_Label">Journey length</label>
+              <select name="" id="" class="dst-Filter_Select">
+                <option value="" class="dst-Filter_Option">Less than 2 hours</option>
+              </select>
+            </li>
+            <li class="dst-Filter_Item">
+              <label for="" class="dst-Filter_Label">Climate / Weather</label>
+              <select name="" id="" class="dst-Filter_Select">
+                <option value="" class="dst-Filter_Option">Hot as heck</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <div class="dst-Filter_Right">
+          <a href="#" class="dst-Filter_Link">Discover</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

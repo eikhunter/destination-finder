@@ -1,0 +1,137 @@
+/*
+|--------------------------------------------------------------------------
+| Switch
+|--------------------------------------------------------------------------
+| @namespace: flt-
+|
+*/
+.flt-Switch {
+  align-items: center;
+  justify-content: space-between;
+
+  display: flex;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Search
+|--------------------------------------------------------------------------
+|
+*/
+.flt-Switch_Search {
+  display: flex;
+}
+
+.flt-Switch_SearchInput {
+  min-width: 290px;
+
+  border: none;
+  box-shadow: none;
+
+  &::placeholder {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: var(--Color_Light);
+
+    transition: color, var(--Global_Transition);
+  }
+
+  &:focus {
+    &::placeholder {
+      color: var(--Color_Body);
+    }
+  }
+
+  &:hover {
+    &::placeholder {
+      color: var(--Color_Body);
+    }
+  }
+}
+
+.flt-Switch_SearchButton {
+  margin-right: 16px;
+  padding: 0;
+
+  border: none;
+
+  color: var(--Color_Body);
+
+  /* stylelint-disable selector-max-type */
+  svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
+  /* stylelint-enable */
+}
+
+/*
+|--------------------------------------------------------------------------
+| Items
+|--------------------------------------------------------------------------
+|
+*/
+.flt-Switch_Items {
+  display: flex;
+  margin-right: -8px;
+  margin-left: @margin-right;
+}
+
+.flt-Switch_Item {
+  margin-right: 8px;
+  margin-left: @margin-right;
+}
+
+.flt-Switch_Link {
+  color: var(--Color_Light);
+
+  transition: color, var(--Global_Transition);
+
+  /* stylelint-disable selector-max-type */
+  svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
+  /* stylelint-enable */
+
+  &:hover {
+    color: var(--Color_Body);
+  }
+}
+
+.flt-Switch_Link-active {
+  color: var(--Color_Body);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Sort
+|--------------------------------------------------------------------------
+|
+*/
+.flt-Switch_Label {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: var(--Color_Body);
+}
+
+.flt-Switch_Select {
+  height: 28px;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  border: transparent;
+
+  color: var(--Color_Light);
+
+  transition: color, var(--Global_Transition);
+
+  &:hover {
+    color: var(--Color_Body);
+  }
+}

@@ -23,6 +23,15 @@
 
 @mixin Button-secondary {
   @include Button;
+
+  font-size: 26px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+
+  background-color: var(--Color_Burgundy);
+  border-color: var(--Color_Burgundy);
+
+  color: #fff;
 }
 
 /*

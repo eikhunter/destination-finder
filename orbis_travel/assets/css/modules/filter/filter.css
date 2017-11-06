@@ -1,0 +1,17 @@
+/*
+|--------------------------------------------------------------------------
+| Filter
+|--------------------------------------------------------------------------
+| @namespace: flt-
+|
+*/
+.flt-Filter {
+  margin-bottom: 0.25vr;
+
+  &:last-child {
+    margin-bottom: 1.25vr;
+    padding-bottom: 0.5vr;
+
+    border-bottom: 1px solid var(--Color_Dark);
+  }
+}

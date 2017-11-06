@@ -11,7 +11,7 @@
   position: relative;
   z-index: 10;
 
-  background-color: #111;
+  background-color: var(--Color_Blue);
 
   .lyt-AbsoluteHeader & {
     position: absolute;
@@ -30,7 +30,7 @@
       left: 0;
       z-index: -1;
 
-      background-color: #111;
+      background-color: var(--Color_Blue);
 
       opacity: 0.7;
     }
@@ -95,18 +95,24 @@
 
   &:focus {
     &::placeholder {
-      color: #888;
+      color: var(--Color_Light);
     }
   }
 
   &:hover {
     &::placeholder {
-      color: #888;
+      color: var(--Color_Light);
     }
   }
 }
 
 .hd-Header_SearchButton {
+  margin-right: 5px;
+
+  border: none;
+
+  color: #fff;
+
   /* stylelint-disable selector-max-type */
   svg {
     display: block;
@@ -183,5 +189,11 @@
 
   border: transparent;
 
-  color: #999;
+  color: var(--Color_Light);
+
+  transition: color, var(--Global_Transition);
+
+  &:hover {
+    color: #fff;
+  }
 }
