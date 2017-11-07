@@ -23,7 +23,40 @@
 */
 .pg-Landing_Header {
   position: relative;
-  z-index: 1;
+
+  text-align: center;
+}
+
+.pg-Landing_Title {
+  @apply --Font-110;
+
+  margin-bottom: 2vr;
+  padding-left: 28px;
+  outline: solid;
+
+  font-family: var(--Font_Family-anton);
+  font-weight: 100;
+  letter-spacing: 28px;
+  line-height: 5vr;
+  text-transform: uppercase;
+
+  background-color: rgba(000, 000, 000, 0.2);
+
+  color: #fff;
+}
+
+.pg-Landing_Subtitle {
+  @apply --Font-32;
+
+  position: relative;
+  z-index: 3;
+
+  text-shadow: 2px 2px 3px rgba(000, 000, 000, 0.2);
+
+  letter-spacing: 8px;
+  text-transform: uppercase;
+
+  color: #fff;
 }
 
 /*
@@ -51,9 +84,15 @@
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: -1;
 
   width: 100%;
   height: @width;
 
   object-fit: cover;
+}
+
+.pg-Landing_Image-bottom {
+  top: 38%;
+  z-index: 2;
 }

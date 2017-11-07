@@ -11,8 +11,8 @@
   --Color_Peach: #fa6044;
   --Color_Red: #ff2424;
   --Color_Blue: #374e73;
-  --Color_Dark: #cdcdcd;
-  --Color_Light: #bababa;
+  --Color_Light: #cdcdcd;
+  --Color_Dark: #bababa;
   --Color_Sand: #ece7e1;
   --Color_Burgundy: #a76f66;
   --Color_Peach-faded: rgba(221, 62, 33, 0.8);
@@ -43,6 +43,7 @@
   --Font-16: { font-size: 16px; line-height: 1vr; };
   --Font-18: { font-size: 16px; line-height: 1vr; };
   --Font-22: { font-size: 22px; line-height: 1vr; };
+  --Font-32: { font-size: 32px; line-height: 1.25vr; };
   --Font-42: { font-size: 42px; line-height: 1vr; };
   --Font-110: { font-size: 110px; line-height: 6vr; };
 

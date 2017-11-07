@@ -12,6 +12,6 @@
     margin-bottom: 1.25vr;
     padding-bottom: 0.5vr;
 
-    border-bottom: 1px solid var(--Color_Dark);
+    border-bottom: 1px solid var(--Color_Light);
   }
 }

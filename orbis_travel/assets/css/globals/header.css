@@ -95,13 +95,13 @@
 
   &:focus {
     &::placeholder {
-      color: var(--Color_Light);
+      color: var(--Color_Dark);
     }
   }
 
   &:hover {
     &::placeholder {
-      color: var(--Color_Light);
+      color: var(--Color_Dark);
     }
   }
 }
@@ -189,7 +189,7 @@
 
   border: transparent;
 
-  color: var(--Color_Light);
+  color: var(--Color_Dark);
 
   transition: color, var(--Global_Transition);
 

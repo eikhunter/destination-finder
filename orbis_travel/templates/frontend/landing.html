@@ -5,37 +5,63 @@
 {% block content %}
   <div class="pg-Landing">
     <div class="pg-Landing_ImageContainer">
-      <img alt="" src="/static/img/golden-gate-bridge.jpg" class="pg-Landing_Image">
+      <img alt="" src="/static/img/ski-layer.png" class="pg-Landing_Image pg-Landing_Image-top">
     </div>
-  </div>
 
-  <div class="dst-Filter">
-    <div class="dst-Filter_Inner">
-      <div class="dst-Filter_Body">
-        <div class="dst-Filter_Left">
-          <ul class="dst-Filter_Items">
-            <li class="dst-Filter_Item">
-              <label for="" class="dst-Filter_Label">Holiday type</label>
-              <select name="" id="" class="dst-Filter_Select">
-                <option value="" class="dst-Filter_Option">Outdoorsy</option>
-              </select>
-            </li>
-            <li class="dst-Filter_Item">
-              <label for="" class="dst-Filter_Label">Journey length</label>
-              <select name="" id="" class="dst-Filter_Select">
-                <option value="" class="dst-Filter_Option">Less than 2 hours</option>
-              </select>
-            </li>
-            <li class="dst-Filter_Item">
-              <label for="" class="dst-Filter_Label">Climate / Weather</label>
-              <select name="" id="" class="dst-Filter_Select">
-                <option value="" class="dst-Filter_Option">Hot as heck</option>
-              </select>
-            </li>
-          </ul>
-        </div>
-        <div class="dst-Filter_Right">
-          <a href="#" class="dst-Filter_Link">Discover</a>
+    <header class="pg-Landing_Header">
+      <h1 class="pg-Landing_Title">Abu Dhabi</h1>
+      <h2 class="pg-Landing_Subtitle">Find your adventure</h2>
+    </header>
+
+    <div class="pg-Landing_ImageContainer">
+      <img alt="" src="/static/img/sand-layer.png" class="pg-Landing_Image pg-Landing_Image-bottom">
+    </div>
+
+    <div class="pg-Landing_Body">
+      <div class="dst-Filter">
+        <div class="dst-Filter_Inner">
+          <div class="dst-Filter_Body">
+            <div class="dst-Filter_Left">
+              <ul class="dst-Filter_Items">
+                <li class="dst-Filter_Item">
+                  <span class="dst-Filter_Icon">
+                    {% include 'house-icon.svg' %}
+                  </span>
+                  <div class="dst-Filter_SelectItem">
+                    <label for="" class="dst-Filter_Label">Holiday type</label>
+                    <select name="" id="" class="dst-Filter_Select">
+                      <option value="" class="dst-Filter_Option">Outdoorsy</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="dst-Filter_Item">
+                  <span class="dst-Filter_Icon">
+                    {% include 'plane-icon.svg' %}
+                  </span>
+                  <div class="dst-Filter_SelectItem">
+                    <label for="" class="dst-Filter_Label">Journey length</label>
+                    <select name="" id="" class="dst-Filter_Select">
+                      <option value="" class="dst-Filter_Option">Less than 2 hours</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="dst-Filter_Item">
+                  <span class="dst-Filter_Icon">
+                    {% include 'sun-icon.svg' %}
+                  </span>
+                  <div class="dst-Filter_SelectItem">
+                    <label for="" class="dst-Filter_Label">Climate / Weather</label>
+                    <select name="" id="" class="dst-Filter_Select">
+                      <option value="" class="dst-Filter_Option">Hot as heck</option>
+                    </select>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="dst-Filter_Right">
+              <a href="#" class="dst-Filter_Link">Discover</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
